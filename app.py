@@ -25,11 +25,11 @@ async def paginator_callback(client, callback_query):
         pass  # Ignore current page callback
 
 async def job(client, callback_query):
-  buttons = [[InlineKeyboardButton('Back', callback_data='back')]]
-  # ...
-  paginator.__init__(page_count=page_count, text=pages_dict_or_text)  # Call it anywhere in the code :)
+	buttons = [[InlineKeyboardButton('Back', callback_data='back')]]
+	# ...
+	paginator.__init__(page_count=page_count, text=pages_dict_or_text)  # Call it anywhere in the code :)
   
-  # Add buttons after paginator buttons
-  paginator.add_after(buttons)
-  # Or add buttons before paginator buttons
-  paginator.add_before(buttons)
+	# Add buttons after paginator buttons
+	paginator.add_after(buttons)
+	# Or add buttons before paginator buttons
+	paginator.add_before(buttons)
