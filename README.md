@@ -1,4 +1,4 @@
-# PyrogramPaginator
+# Pyrogram Paginator
 A module for Pyrogram to paginate long messages simply!
 
 ### How do I use it?
@@ -26,9 +26,16 @@ async def paginator_callback(client, callback_query):
 ```python
 paginator.__init__(page_count=page_count, text=pages_dict_or_text)
 ```
-- `page_count` is the number of pages you want to be divided.
+- `page_count` is the number of pages you want to be divided. (optional)
 - The `text` parameter accepts two types of data,
   `dict` and `str`. You can customarily use the dictionary key as the page number and the dictionary value as the text of that page.<br>
   Otherwise, the text is automatically divided into pages of 100 words each.
 ### What if I have buttons?
-You can use 
+- To add some buttons after the pagination buttons do the same as below:
+```python
+paginator.add_after(buttons)
+```
+- And to add some buttons before the pagination buttons:
+```python
+paginator.add_before(buttons)
+```
