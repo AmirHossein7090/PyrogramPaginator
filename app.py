@@ -1,4 +1,6 @@
 # Your imports ...
+import pyrogram
+from pyrogram import Client
 from paginator import Pagination  # Don't forget this!
 
 app = Client(name='my_app')
